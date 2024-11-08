@@ -2,16 +2,13 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
+# 최상위 디렉토리에 있는 dotenv 파일을 불러오는 함수
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# .env 파일 내에 'DJANGO_API_KEY'로 API KEY 관리
 SECRET_KEY = os.getenv("DJANGO_API_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
